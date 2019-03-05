@@ -1,5 +1,6 @@
 package gui;
 
+import bl.UhrzeitPanel;
 import java.awt.Color;
 
 public class UhrzeitanzeigeGUI extends javax.swing.JFrame {
@@ -7,6 +8,9 @@ public class UhrzeitanzeigeGUI extends javax.swing.JFrame {
     public UhrzeitanzeigeGUI() {
         initComponents();
         this.getContentPane().setBackground(Color.black);
+        paLokal.add(new UhrzeitPanel());
+        paSydney.add(new UhrzeitPanel());
+        paLosAngeles.add(new UhrzeitPanel());
     }
 
     @SuppressWarnings("unchecked")
@@ -37,38 +41,11 @@ public class UhrzeitanzeigeGUI extends javax.swing.JFrame {
         lb3.setText("Los Angeles:");
         lb3.setOpaque(true);
 
-        javax.swing.GroupLayout paLokalLayout = new javax.swing.GroupLayout(paLokal);
-        paLokal.setLayout(paLokalLayout);
-        paLokalLayout.setHorizontalGroup(
-            paLokalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 252, Short.MAX_VALUE)
-        );
-        paLokalLayout.setVerticalGroup(
-            paLokalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+        paLokal.setLayout(new java.awt.BorderLayout());
 
-        javax.swing.GroupLayout paSydneyLayout = new javax.swing.GroupLayout(paSydney);
-        paSydney.setLayout(paSydneyLayout);
-        paSydneyLayout.setHorizontalGroup(
-            paSydneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        paSydneyLayout.setVerticalGroup(
-            paSydneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 39, Short.MAX_VALUE)
-        );
+        paSydney.setLayout(new java.awt.BorderLayout());
 
-        javax.swing.GroupLayout paLosAngelesLayout = new javax.swing.GroupLayout(paLosAngeles);
-        paLosAngeles.setLayout(paLosAngelesLayout);
-        paLosAngelesLayout.setHorizontalGroup(
-            paLosAngelesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        paLosAngelesLayout.setVerticalGroup(
-            paLosAngelesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+        paLosAngeles.setLayout(new java.awt.BorderLayout());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
