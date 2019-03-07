@@ -5,7 +5,6 @@ import java.awt.Color;
 import java.time.LocalTime;
 
 public class UhrzeitanzeigeGUI extends javax.swing.JFrame {
-    
     private UhrzeitPanel panel1 = new UhrzeitPanel(LocalTime.now());
     private UhrzeitPanel panel2 = new UhrzeitPanel(LocalTime.now().plusHours(10));
     private UhrzeitPanel panel3 = new UhrzeitPanel(LocalTime.now().minusHours(9));
