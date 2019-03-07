@@ -31,7 +31,7 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="paLokal" max="32767" attributes="0"/>
+                  <Component id="paLokal" pref="264" max="32767" attributes="0"/>
                   <Component id="paSydney" max="32767" attributes="0"/>
                   <Component id="paLosAngeles" alignment="0" max="32767" attributes="0"/>
               </Group>

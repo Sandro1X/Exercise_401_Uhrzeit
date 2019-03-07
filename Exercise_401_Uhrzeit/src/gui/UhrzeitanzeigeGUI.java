@@ -2,15 +2,24 @@ package gui;
 
 import bl.UhrzeitPanel;
 import java.awt.Color;
+import java.time.LocalTime;
 
 public class UhrzeitanzeigeGUI extends javax.swing.JFrame {
+    
+    private UhrzeitPanel panel1 = new UhrzeitPanel(LocalTime.now());
+    private UhrzeitPanel panel2 = new UhrzeitPanel(LocalTime.now().plusHours(10));
+    private UhrzeitPanel panel3 = new UhrzeitPanel(LocalTime.now().minusHours(9));
 
     public UhrzeitanzeigeGUI() {
         initComponents();
         this.getContentPane().setBackground(Color.black);
-        paLokal.add(new UhrzeitPanel());
-        paSydney.add(new UhrzeitPanel());
-        paLosAngeles.add(new UhrzeitPanel());
+        paLokal.add(panel1);
+        paSydney.add(panel2);
+        paLosAngeles.add(panel3);
+        
+        new Thread(panel1).start();
+        new Thread(panel2).start();
+        new Thread(panel3).start();
     }
 
     @SuppressWarnings("unchecked")
@@ -58,7 +67,7 @@ public class UhrzeitanzeigeGUI extends javax.swing.JFrame {
                     .addComponent(lb3, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(paLokal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(paLokal, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
                     .addComponent(paSydney, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(paLosAngeles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );

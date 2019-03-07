@@ -9,6 +9,7 @@ public class UhrzeitLabel extends JLabel {
 
     public UhrzeitLabel() {
         this.setOpaque(true);
+        this.setBackground(Color.white);
     }
 
     public void setZiffer(Ziffern ziffer) {
