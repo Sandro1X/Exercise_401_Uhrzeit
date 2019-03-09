@@ -16,4 +16,8 @@ public class UhrzeitLabel extends JLabel {
         this.ziffer = ziffer;
         this.setIcon(new ImageIcon(getClass().getResource("/icons/"+ziffer.getZiffer()+".png")));
     }
+    
+    public Ziffern getZiffer(){
+        return ziffer;
+    }
 }

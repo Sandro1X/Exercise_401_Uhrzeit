@@ -62,4 +62,8 @@ public class UhrzeitPanel extends JPanel implements Runnable {
             time = time.plusSeconds(1);
         }
     }
+
+    public UhrzeitLabel[] getDigits() {
+        return digits;
+    }
 }
